@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="calciStyle.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display-container">
+                <div class="display">
+                    <div class="previous-operand" id="previous-operand"></div>
+                    <div class="current-operand" id="current-operand">0</div>
+                </div>
+            </div>
+            
+            <div class="buttons-grid">
+                <!-- Row 1 - Function buttons and basic operations -->
+                <button class="btn function" onclick="clearAll()">C</button>
+                <button class="btn function" onclick="clearEntry()">CE</button>
+                <button class="btn function" onclick="backspace()">⌫</button>
+                <button class="btn operator" onclick="appendOperator('/')">/</button>
+                <button class="btn operator" onclick="appendOperator('*')">×</button>
+                <button class="btn operator" onclick="appendOperator('-')">-</button>
+                <button class="btn operator" onclick="appendOperator('+')">+</button>
+                <button class="btn equals" onclick="calculate()">=</button>
+                
+                <!-- Row 2 - Scientific functions -->
+                <button class="btn scientific" onclick="calculateFunction('sin')">sin</button>
+                <button class="btn scientific" onclick="calculateFunction('cos')">cos</button>
+                <button class="btn scientific" onclick="calculateFunction('tan')">tan</button>
+                <button class="btn scientific" onclick="calculateFunction('log')">log</button>
+                <button class="btn scientific" onclick="calculateFunction('ln')">ln</button>
+                <button class="btn scientific" onclick="calculateFunction('exp')">e^x</button>
+                <button class="btn scientific" onclick="appendOperator('^')">x^y</button>
+                <button class="btn scientific" onclick="calculateFunction('sqrt')">√</button>
+                
+                <!-- Row 3 - More scientific functions -->
+                <button class="btn scientific" onclick="calculateFunction('asin')">asin</button>
+                <button class="btn scientific" onclick="calculateFunction('acos')">acos</button>
+                <button class="btn scientific" onclick="calculateFunction('atan')">atan</button>
+                <button class="btn scientific" onclick="calculateFunction('cbrt')">∛</button>
+                <button class="btn scientific" onclick="calculateFunction('factorial')">n!</button>
+                <button class="btn scientific" onclick="appendNumber('3.14159')">π</button>
+                <button class="btn scientific" onclick="appendNumber('2.71828')">e</button>
+                <button class="btn scientific" onclick="calculateFunction('square')">x²</button>
+                
+                <!-- Row 4 - Numbers and special functions -->
+                <button class="btn number" onclick="appendNumber('7')">7</button>
+                <button class="btn number" onclick="appendNumber('8')">8</button>
+                <button class="btn number" onclick="appendNumber('9')">9</button>
+                <button class="btn scientific" onclick="appendOperator('(')">(</button>
+                <button class="btn scientific" onclick="appendOperator(')')">)</button>
+                <button class="btn scientific" onclick="appendOperator('%')">%</button>
+                <button class="btn scientific" onclick="calculateFunction('reciprocal')">1/x</button>
+                <button class="btn number" onclick="toggleSign()">±</button>
+                
+                <!-- Row 5 - Numbers -->
+                <button class="btn number" onclick="appendNumber('4')">4</button>
+                <button class="btn number" onclick="appendNumber('5')">5</button>
+                <button class="btn number" onclick="appendNumber('6')">6</button>
+                <button class="btn number" onclick="appendNumber('1')">1</button>
+                <button class="btn number" onclick="appendNumber('2')">2</button>
+                <button class="btn number" onclick="appendNumber('3')">3</button>
+                <button class="btn number" onclick="appendNumber('0')">0</button>
+                <button class="btn number" onclick="appendNumber('.')">.</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="calciScript.js"></script>
+</body>
+</html>
